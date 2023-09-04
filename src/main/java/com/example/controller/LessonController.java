@@ -3,9 +3,7 @@ package com.example.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -15,11 +13,12 @@ import SampleForm.SampleForm;
 @RequestMapping("/lesson")
 public class LessonController {
 	
-    @GetMapping("/sample")
+    /*@GetMapping("/sample")
     @ResponseBody
     public String sampl() {
     	return "Hello World";
     }
+    */
     
     @GetMapping("/")
     @ResponseBody
@@ -44,12 +43,12 @@ public class LessonController {
 		return "index";
 	}
 	
-	@GetMapping("/sampl")
+	/*@GetMapping("/sample")
 	public String sample(Model model) {
 		String text = "Hello Spring Boot!!!!!";
 		model.addAttribute("message", text);
 		return "index";
-	}
+	}*/
 	
 	
 	@GetMapping("/request_test")
@@ -58,11 +57,11 @@ public class LessonController {
 	    return "名前:" + name + "<br>血液型" + bloodType;
 	}
 	
-	@PostMapping("/request_test")
+	/*@PostMapping("/request_test")
 	@ResponseBody
 	public String postTest(SampleForm sampleForm) {
 		return "名前" + sampleForm.getName() + "<br>血液型" + sampleForm.getBloodType();
-	}
+	}*/
 	
 	@GetMapping("/form_test")
 	public String formTet(SampleForm sampleForm, Model model) {
@@ -70,8 +69,8 @@ public class LessonController {
 		return "lesson/form_tet";
 	}
 	
-	@GetMapping("/form_test")
+	/*@GetMapping("/form_test")
 	public String formTestt(@ModelAttribute SampleForm sampleForm) {
 	    return "lesson/form_test";
-	}
+	}*/
 }
