@@ -17,7 +17,7 @@ public class LessonController {
 	
     @GetMapping("/sample")
     @ResponseBody
-    public String sample() {
+    public String sampl() {
     	return "Hello World";
     }
     
@@ -34,7 +34,7 @@ public class LessonController {
     }
     
     @GetMapping("/test/{num}")
-    public String test(@PathVariable Integer num) {
+    public String tes(@PathVariable Integer num) {
     	return "Hello";
     }
 
@@ -44,7 +44,7 @@ public class LessonController {
 		return "index";
 	}
 	
-	@GetMapping("/sample")
+	@GetMapping("/sampl")
 	public String sample(Model model) {
 		String text = "Hello Spring Boot!!!!!";
 		model.addAttribute("message", text);
@@ -65,13 +65,13 @@ public class LessonController {
 	}
 	
 	@GetMapping("/form_test")
-	public String formTest(SampleForm sampleForm, Model model) {
+	public String formTet(SampleForm sampleForm, Model model) {
 		model.addAttribute("sampleForm", sampleForm);
-		return "lesson/form_test";
+		return "lesson/form_tet";
 	}
 	
 	@GetMapping("/form_test")
-	public String formTest(@ModelAttribute SampleForm sampleForm) {
+	public String formTestt(@ModelAttribute SampleForm sampleForm) {
 	    return "lesson/form_test";
 	}
 }
