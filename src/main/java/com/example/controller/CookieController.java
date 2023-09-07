@@ -21,6 +21,7 @@ public class CookieController {
     public String setCookie(@RequestParam String value, HttpServletResponse res) {
     	res.addCookie(new Cookie("test_cookie", value));
     	return "保存しました";
+    	//なんでマスター消える？
     }
     
     @GetMapping("/get")
